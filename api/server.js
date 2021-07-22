@@ -4,12 +4,12 @@ const usersRouter = require("./users/router");
 
 server.use(express.json());
 
+server.use("/api/users", usersRouter);
+
 server.use("/", (req, res, next) => {
   res.json({
     message: "server up",
   });
 });
-
-// server.use("/api/users", usersRouter);
 
 module.exports = server;
