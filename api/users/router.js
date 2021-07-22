@@ -4,7 +4,13 @@ const User = require('./model');
 const router = express.Router();
 
 router.get('/', async (req, res, next) => {
-    console.log('get endpoint');
+    try {
+        const users = await User.fetch();
+        res.status(200).json(users);
+    } catch (err) {
+        next(err);
+    }
+    
 })
 
 router.post('/', async (req, res, next) => {
