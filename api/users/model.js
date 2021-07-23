@@ -7,7 +7,6 @@ function fetch() {
 async function add(user) {
   const [user_id] = await db("users").insert(user);
   const newUser = db("users").where("user_id", user_id).first();
-  console.log(newUser);
   return newUser;
 }
 

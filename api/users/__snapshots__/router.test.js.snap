@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[DELETE] snapshot test 1`] = `
+Object {
+  "user_id": 3,
+  "username": "baz",
+}
+`;
+
+exports[`[GET] /api/users snapshot test 1`] = `
+Array [
+  Object {
+    "user_id": 1,
+    "username": "foo",
+  },
+  Object {
+    "user_id": 2,
+    "username": "bar",
+  },
+  Object {
+    "user_id": 3,
+    "username": "baz",
+  },
+]
+`;
+
+exports[`[POST] /api/users snapshot test 1`] = `
+Object {
+  "user_id": 4,
+  "username": "foobar",
+}
+`;
